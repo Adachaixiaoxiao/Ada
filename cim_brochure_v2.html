@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIM危机保 · 重疾险宣传简报</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "PingFang SC", -apple-system, "Helvetica Neue", Arial, sans-serif; background: #F7FAF5; display: flex; flex-direction: column; align-items: center; padding: 48px 20px 72px; gap: 56px; }
+
+.slide { width: 900px; min-height: 580px; background: #FFFFFF; border-radius: 18px; box-shadow: 0 6px 40px rgba(60,120,60,0.10); display: flex; flex-direction: column; overflow: hidden; }
+.slide::before { content: ""; display: block; height: 5px; background: linear-gradient(90deg, #5B8C5A, #8FBF6F, #5B8C5A); flex-shrink: 0; }
+
+.s-header { padding: 30px 52px 18px; border-bottom: 1px solid #E8F0E8; }
+.s-title { font-size: 26px; font-weight: 700; color: #2D4A2D; line-height: 1.4; }
+.s-title em { font-style: normal; color: #5B8C5A; }
+.s-subtitle { font-size: 13px; color: #8A9B8A; margin-top: 6px; }
+
+.s-body { flex: 1; padding: 22px 52px 30px; display: flex; flex-direction: column; }
+
+.section-label { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: #5B8C5A; margin-bottom: 12px; margin-top: 20px; }
+.section-label::before { content: ""; width: 4px; height: 18px; background: linear-gradient(180deg, #5B8C5A, #8FBF6F); border-radius: 2px; flex-shrink: 0; }
+
+.info-block { background: #F0F7ED; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; border-left: 4px solid #8FBF6F; }
+.info-block p { font-size: 13.5px; color: #3A5A3A; line-height: 1.75; }
+.info-block strong { color: #2D4A2D; font-weight: 600; }
+.info-block em { color: #5B8C5A; font-style: normal; font-weight: 600; }
+
+.bottom-note { background: linear-gradient(135deg, #5B8C5A, #8FBF6F); border-radius: 10px; padding: 14px 22px; margin-top: auto; }
+.bottom-note p { font-size: 14px; color: #fff; line-height: 1.65; font-weight: 500; }
+.bottom-note strong { font-weight: 800; }
+
+.reason-card { background: #F0F7ED; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; gap: 16px; align-items: flex-start; border: 1px solid #D8E8D8; }
+.reason-num { width: 32px; height: 32px; background: linear-gradient(135deg, #5B8C5A, #8FBF6F); border-radius: 10px; color: #fff; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.reason-card .t { font-size: 14px; font-weight: 700; color: #2D4A2D; margin-bottom: 6px; }
+.reason-card .d { font-size: 13px; color: #3A5A3A; line-height: 1.7; }
+.reason-card .d strong { color: #2D4A2D; font-weight: 600; }
+
+.early-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 14px; }
+.early-item { background: #EEF5EE; border-radius: 10px; padding: 14px 14px; text-align: center; }
+.early-item .icon { font-size: 20px; margin-bottom: 6px; }
+.early-item .t { font-size: 12.5px; font-weight: 600; color: #2D4A2D; margin-bottom: 4px; }
+.early-item .d { font-size: 11.5px; color: #5A7A5A; line-height: 1.5; }
+
+.cover-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+.cover-block { background: #F0F7ED; border-radius: 12px; padding: 16px 18px; border: 1px solid #D8E8D8; }
+.cover-block .t { font-size: 14px; font-weight: 700; color: #5B8C5A; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid #D8E8D8; }
+.cover-item { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 8px; }
+.cover-item:last-child { margin-bottom: 0; }
+.cover-dot { width: 6px; height: 6px; background: #8FBF6F; border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+.cover-item p { font-size: 12.5px; color: #3A5A3A; line-height: 1.6; }
+.cover-item p strong { color: #2D4A2D; font-weight: 600; }
+
+.saving-block { background: #F0F7ED; border-radius: 12px; padding: 16px 18px; border: 1px solid #D8E8D8; margin-top: 14px; }
+.saving-block .t { font-size: 14px; font-weight: 700; color: #5B8C5A; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid #D8E8D8; }
+.saving-content { font-size: 13px; color: #3A5A3A; line-height: 1.7; }
+.saving-content strong { color: #2D4A2D; font-weight: 600; }
+.saving-content em { color: #5B8C5A; font-style: normal; font-weight: 700; }
+
+.triple-badge { background: linear-gradient(135deg, #5B8C5A, #8FBF6F); border-radius: 10px; padding: 12px 20px; margin-top: 14px; text-align: center; }
+.triple-badge p { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+.triple-badge span { opacity: 0.7; margin: 0 6px; }
+
+.highlight-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 12px; }
+.hl-card { background: linear-gradient(135deg, #EEF5EE, #F0F7ED); border-radius: 12px; padding: 16px 18px; border: 1px solid #C8D8C8; }
+.hl-card .label { font-size: 11px; font-weight: 600; color: #8FBF6F; letter-spacing: 1px; margin-bottom: 6px; }
+.hl-card .value { font-size: 20px; font-weight: 800; color: #5B8C5A; line-height: 1.2; margin-bottom: 4px; }
+.hl-card .desc { font-size: 12px; color: #5A7A5A; line-height: 1.5; }
+
+.img-container { border-radius: 12px; overflow: hidden; border: 1px solid #D8E8D8; flex: 1; display: flex; align-items: center; justify-content: center; background: #F0F7ED; padding: 10px; min-height: 280px; }
+.img-container img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; }
+
+.img-showcase { flex: 1; display: flex; align-items: center; justify-content: center; background: #F0F7ED; border-radius: 12px; border: 1px solid #D8E8D8; padding: 20px; min-height: 400px; }
+.img-showcase img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; }
+
+.demo-table-wrapper { overflow-x: auto; margin-top: 10px; border-radius: 10px; border: 1px solid #D8E8D8; }
+.demo-table { width: 100%; border-collapse: collapse; font-size: 11.5px; background: #fff; }
+.demo-table thead { background: linear-gradient(135deg, #5B8C5A, #8FBF6F); }
+.demo-table th { color: #fff; font-weight: 600; padding: 10px 8px; text-align: center; font-size: 11px; white-space: nowrap; }
+.demo-table tbody tr:nth-child(even) { background: #F0F7ED; }
+.demo-table td { padding: 8px 8px; text-align: center; color: #3A5A3A; border-bottom: 1px solid #E8F0E8; font-size: 11px; }
+.demo-table td.highlight { color: #5B8C5A; font-weight: 700; }
+
+.table-notes { margin-top: 12px; background: #F0F7ED; border-radius: 8px; padding: 10px 14px; border-left: 3px solid #8FBF6F; }
+.table-notes p { font-size: 12px; color: #3A5A3A; line-height: 1.6; }
+.table-notes strong { color: #5B8C5A; font-weight: 600; }
+
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.feature-card { background: #F0F7ED; border-radius: 12px; padding: 16px 14px; border: 1px solid #D8E8D8; }
+.feature-card .t { font-size: 13px; font-weight: 700; color: #2D4A2D; margin-bottom: 8px; padding-bottom: 7px; border-bottom: 1px solid #D8E8D8; }
+.feature-card .d { font-size: 12px; color: #3A5A3A; line-height: 1.6; }
+.feature-card .d strong { color: #5B8C5A; font-weight: 600; }
+
+.service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
+.service-card { background: linear-gradient(135deg, #EEF5EE, #F0F7ED); border-radius: 12px; padding: 14px 16px; border: 1px solid #C8D8C8; display: flex; gap: 12px; align-items: flex-start; }
+.service-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #5B8C5A, #8FBF6F); border-radius: 8px; color: #fff; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.service-card .t { font-size: 13.5px; font-weight: 700; color: #2D4A2D; margin-bottom: 4px; }
+.service-card .d { font-size: 12px; color: #3A5A3A; line-height: 1.55; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 · 为什么配置重疾险？ -->
+<div class="slide" id="s1">
+  <div class="s-header">
+    <div class="s-title">为什么<em>配置重疾险</em>？</div>
+  </div>
+  <div class="s-body">
+    <div class="reason-card">
+      <div class="reason-num">1</div>
+      <div>
+        <p class="t">收入损失补偿</p>
+        <p class="d">如果在年富力强时倒下，面对的不仅是高昂的医疗费，还有 <strong>3-5年康复期无法正常工作</strong>。重疾险的赔付，能继续支付房贷、车贷、孩子学费、父母赡养，<strong>让你安心休养，不必为钱发愁</strong>。</p>
+      </div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">2</div>
+      <div>
+        <p class="t">重疾日趋年轻化</p>
+        <p class="d">40岁，是人生的黄金期，也是重疾风险的陡升期——男性高发的<strong>肺癌、肝癌、胃癌</strong>，女性高发的<strong>乳腺癌、甲状腺癌、肺癌、子宫颈癌</strong>，发病率均从40岁后陡增。现代生活压力大，提早布局保障，<strong>锁住未来几十年的安心</strong>。</p>
+      </div>
+    </div>
+    <p class="section-label">为什么早买早好？</p>
+    <div class="early-grid">
+      <div class="early-item">
+        <div class="icon">💰</div>
+        <p class="t">保费更便宜</p>
+        <p class="d">精算概率更划算</p>
+      </div>
+      <div class="early-item">
+        <div class="icon">🛡️</div>
+        <p class="t">保费杠杆更高</p>
+        <p class="d">保障期更长</p>
+      </div>
+      <div class="early-item">
+        <div class="icon">✅</div>
+        <p class="t">核保更宽松</p>
+        <p class="d">年龄增长指标异常，可能被除外甚至拒保</p>
+      </div>
+    </div>
+    <div class="bottom-note" style="margin-top: 20px;">
+      <p>💡 <strong>高杠杆的保障：</strong>用确定的、可控的小额保费，去转移不确定的、不可控的巨额财务风险</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2 · CIM危机保，保什么？ -->
+<div class="slide" id="s2">
+  <div class="s-header">
+    <div class="s-title">CIM危机保，<em>保什么？</em></div>
+  </div>
+  <div class="s-body">
+    <div class="cover-grid">
+      <div class="cover-block">
+        <p class="t">🏥 有病赔钱</p>
+        <div class="cover-item">
+          <div class="cover-dot"></div>
+          <p><strong>127种疾病全覆盖：</strong>56种重大疾病 + 49种轻症 + 22种儿童疾病</p>
+        </div>
+        <div class="cover-item">
+          <div class="cover-dot"></div>
+          <p><strong>老年保障：</strong>脑退化（阿尔茨海默）、帕金森：86翌年岁前确诊，每年赔付保额<strong>6%</strong>，一直赔到身故</p>
+        </div>
+      </div>
+      <div class="cover-block">
+        <p class="t">🛡️ 身故保障（双重）</p>
+        <div class="cover-item">
+          <div class="cover-dot"></div>
+          <p><strong>健康过完一生：</strong>从未理赔重疾，身故时依旧赔付保额</p>
+        </div>
+        <div class="cover-item">
+          <div class="cover-dot"></div>
+          <p><strong>重疾赔付后再身故：</strong>首次确诊重疾赔付后，间隔1年不幸身故，再赔一次身故赔偿（86翌年岁前）</p>
+        </div>
+      </div>
+    </div>
+    <div class="saving-block">
+      <p class="t">💰 没病存钱</p>
+      <div class="saving-content">
+        <p>保额和退保价值<strong>逐年增长</strong>。假设30岁投保、分20年缴费，健康生活到65岁（66翌年岁）想退保，可取回本金的 <em>2.84倍</em>——年轻时的每一次保费缴纳，都是在为未来的自己存下一笔<strong>不断增值的资产</strong>。</p>
+      </div>
+    </div>
+    <div class="triple-badge">
+      <p>重大疾病保障<span>+</span>人寿保障（任何身故都赔）<span>+</span>储蓄分红增值 · 三合一</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3 · 赔多少？ -->
+<div class="slide" id="s3">
+  <div class="s-header">
+    <div class="s-title">赔<em>多少</em>？</div>
+  </div>
+  <div class="s-body">
+    <div class="highlight-cards">
+      <div class="hl-card">
+        <p class="label">重症保障上限</p>
+        <p class="value">最高 1000%</p>
+        <p class="desc">重症多次赔付，累计最高达<strong>10倍保额</strong></p>
+      </div>
+      <div class="hl-card">
+        <p class="label">保额增值机制</p>
+        <p class="value">+50% 赠额</p>
+        <p class="desc">基本保额外，前10年额外赠送50%保额；保额随储蓄分红收益<strong>逐年增长</strong></p>
+      </div>
+    </div>
+    <div class="img-container">
+      <img src="cim_image1.png" alt="CIM危机保赔付结构示意图">
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4 · 保障演示图 -->
+<div class="slide" id="s4">
+  <div class="s-header">
+    <div class="s-title"><em>保障演示</em>· 赔付结构图</div>
+  </div>
+  <div class="s-body">
+    <div class="img-showcase">
+      <img src="cim_image2.png" alt="CIM危机保保障演示图">
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5 · 保障计划演示（表格） -->
+<div class="slide" id="s5">
+  <div class="s-header">
+    <div class="s-title"><em>保障计划</em>演示</div>
+    <div class="s-subtitle">以30翌年岁男性投保为例，分20年缴，年缴$3,110</div>
+  </div>
+  <div class="s-body">
+    <div class="demo-table-wrapper">
+      <table class="demo-table">
+        <thead>
+          <tr>
+            <th>保單年度</th>
+            <th>累计保费</th>
+            <th>退保价值<br>保证金额</th>
+            <th>退保价值<br>非保证红利</th>
+            <th>退保价值<br>总额</th>
+            <th>身故/重疾<br>基础保障</th>
+            <th>身故/重疾<br>升级保障</th>
+            <th>身故/重疾<br>非保证红利</th>
+            <th>身故/重疾<br>总额</th>
+            <th>保费杠杆</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>3,110</td><td>0</td><td>0</td><td>0</td><td>100,000</td><td>50,000</td><td>0</td><td>150,000</td><td>48.2</td></tr>
+          <tr><td>2</td><td>6,220</td><td>0</td><td>0</td><td>0</td><td>100,000</td><td>50,000</td><td>0</td><td>150,000</td><td>24.1</td></tr>
+          <tr><td>3</td><td>9,330</td><td>133</td><td>0</td><td>133</td><td>100,000</td><td>50,000</td><td>0</td><td>150,000</td><td>16.1</td></tr>
+          <tr><td>4</td><td>12,440</td><td>346</td><td>0</td><td>346</td><td>100,000</td><td>50,000</td><td>0</td><td>150,000</td><td>12.1</td></tr>
+          <tr><td>5</td><td>15,550</td><td>655</td><td>495</td><td>1,150</td><td>100,000</td><td>50,000</td><td>2,154</td><td>152,154</td><td>9.8</td></tr>
+          <tr><td>6</td><td>18,660</td><td>1,040</td><td>888</td><td>1,928</td><td>100,000</td><td>50,000</td><td>2,350</td><td>152,350</td><td>8.2</td></tr>
+          <tr><td>7</td><td>21,770</td><td>1,522</td><td>1,492</td><td>3,014</td><td>100,000</td><td>50,000</td><td>2,689</td><td>152,689</td><td>7.0</td></tr>
+          <tr><td>8</td><td>24,880</td><td>2,081</td><td>2,206</td><td>4,287</td><td>100,000</td><td>50,000</td><td>2,693</td><td>152,693</td><td>6.1</td></tr>
+          <tr><td>9</td><td>27,990</td><td>2,741</td><td>3,278</td><td>6,019</td><td>100,000</td><td>50,000</td><td>3,278</td><td>153,278</td><td>5.5</td></tr>
+          <tr><td>10</td><td>31,100</td><td>3,469</td><td>4,745</td><td>8,214</td><td>100,000</td><td>50,000</td><td>4,745</td><td>154,745</td><td>5.0</td></tr>
+          <tr><td>20</td><td>62,200</td><td>22,539</td><td>34,487</td><td>57,026</td><td>100,000</td><td>0</td><td>58,452</td><td>158,452</td><td>2.5</td></tr>
+          <tr><td>25</td><td>62,200</td><td>31,213</td><td>56,029</td><td>87,242</td><td>100,000</td><td>0</td><td>87,001</td><td>187,001</td><td>3.0</td></tr>
+          <tr><td>30</td><td>62,200</td><td>32,949</td><td>86,688</td><td>119,637</td><td>100,000</td><td>0</td><td>118,750</td><td>218,750</td><td>3.5</td></tr>
+          <tr><td>66翌年岁</td><td>62,200</td><td>35,028</td><td>141,590</td><td>176,618</td><td>100,000</td><td>0</td><td>171,416</td><td>271,416</td><td>4.4</td></tr>
+          <tr><td>76翌年岁</td><td>40,430</td><td>25,021</td><td>194,330</td><td>219,351</td><td>65,000</td><td>0</td><td>225,965</td><td>290,965</td><td>7.2</td></tr>
+          <tr><td>86翌年岁</td><td>40,430</td><td>65,000</td><td>369,316</td><td>434,316</td><td>65,000</td><td>0</td><td>369,316</td><td>434,316</td><td>10.7</td></tr>
+          <tr><td>101翌年岁</td><td>40,430</td><td>65,000</td><td>1,067,733</td><td>1,132,733</td><td>65,000</td><td>0</td><td>1,067,733</td><td>1,132,733</td><td>28.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-notes">
+      <p><strong>📌 退保价值关键节点：</strong></p>
+      <p>① 21年退保回本（退保价值 ≥ 累计保费）</p>
+      <p>② 30年退保 <em>2.84倍</em>（退保总额 $176,618 ÷ 累计保费 $62,200）</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 6 · 三大保费豁免 + 两大增值服务 -->
+<div class="slide" id="s6">
+  <div class="s-header">
+    <div class="s-title"><em>三大保费豁免</em> + <em>两大增值服务</em></div>
+    <div class="s-subtitle">把保障做到极致</div>
+  </div>
+  <div class="s-body">
+    <p class="section-label">保费豁免</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <p class="t">轻症赔付后</p>
+        <p class="d">免缴 <strong>1年保费</strong>，保障继续生效</p>
+      </div>
+      <div class="feature-card">
+        <p class="t">重症赔付后</p>
+        <p class="d">免缴<strong>后续所有保费</strong>，保障继续生效</p>
+      </div>
+      <div class="feature-card">
+        <p class="t">亲子保费豁免</p>
+        <p class="d">若给孩子投保，<strong>父母身故</strong>则受保人<strong>26岁前</strong>的所有保费免缴，保障继续生效</p>
+      </div>
+    </div>
+    <p class="section-label">增值服务</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">🏥</div>
+        <div>
+          <p class="t">安心医</p>
+          <p class="d">无论疾病是否受保，提供<strong>国际医疗专家治疗意见</strong>、海外治疗安排等</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👨‍👩‍👧</div>
+        <div>
+          <p class="t">智安排</p>
+          <p class="d">可预选委任家人，在受保人<strong>失去行为能力</strong>时，家人可代领赔偿</p>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-note">
+      <p>一份重疾险，不仅是在为自己配置保障，更是在给家人一个承诺——<strong>无论发生什么，他们都不会因为你的倒下而陷入无助。</strong></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
